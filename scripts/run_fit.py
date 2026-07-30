@@ -55,9 +55,7 @@ def main() -> None:
         sys.exit(1)
     config, model = sys.argv[1], sys.argv[2]
 
-    manifest_path = (
-        DATA_ROOT / config / model / f"{model}_{CANDNAME}_manifest.json"
-    )
+    manifest_path = DATA_ROOT / config / model / f"{model}_{CANDNAME}_manifest.json"
     if not manifest_path.is_file():
         raise FileNotFoundError(f"No manifest at {manifest_path}")
     manifest = json.loads(manifest_path.read_text())

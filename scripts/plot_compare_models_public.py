@@ -100,7 +100,9 @@ def compare_models(args) -> str:
         if all(f in run["mag"] for run in runs) and np.any(~np.isnan(data[f][:, 1]))
     ]
     if not filters_plot:
-        raise ValueError("No filter is common to the observed data and all requested models.")
+        raise ValueError(
+            "No filter is common to the observed data and all requested models."
+        )
 
     parts = str(xlim_str).split(",")
     xlim = (float(parts[0]), float(parts[1]))
@@ -120,7 +122,10 @@ def compare_models(args) -> str:
     fig.suptitle(f"{args.candname.replace('_', ' ')} — model comparison", fontsize=14)
 
     for idx, (filt, band_color) in enumerate(
-        zip(filters_plot, [_BAND_COLORS[i % len(_BAND_COLORS)] for i in range(len(filters_plot))])
+        zip(
+            filters_plot,
+            [_BAND_COLORS[i % len(_BAND_COLORS)] for i in range(len(filters_plot))],
+        )
     ):
         r, c = divmod(idx, ncol)
         ax_sum = axes[2 * r, c]
@@ -143,14 +148,25 @@ def compare_models(args) -> str:
         nodet_idx = np.where(~np.isfinite(sig_obs))[0]
 
         ax_sum.errorbar(
-            t_obs[det_idx], y_obs[det_idx], sig_obs[det_idx],
-            fmt="o", color=band_color, ms=6, markeredgecolor="black",
-            elinewidth=1.2, zorder=10,
+            t_obs[det_idx],
+            y_obs[det_idx],
+            sig_obs[det_idx],
+            fmt="o",
+            color=band_color,
+            ms=6,
+            markeredgecolor="black",
+            elinewidth=1.2,
+            zorder=10,
         )
         if len(nodet_idx):
             ax_sum.scatter(
-                t_obs[nodet_idx], y_obs[nodet_idx], marker="v",
-                color=band_color, s=45, edgecolors="black", zorder=10,
+                t_obs[nodet_idx],
+                y_obs[nodet_idx],
+                marker="v",
+                color=band_color,
+                s=45,
+                edgecolors="black",
+                zorder=10,
             )
 
         sigma_tot = None
@@ -166,17 +182,27 @@ def compare_models(args) -> str:
             if len(det_idx):
                 mag_interp = np.interp(t_obs[det_idx], best_times, mag_plot)
                 diff = mag_interp - y_obs[det_idx]
-                sigma_tot = np.sqrt(sig_obs[det_idx] ** 2 + error_budget_val ** 2)
+                sigma_tot = np.sqrt(sig_obs[det_idx] ** 2 + error_budget_val**2)
                 chi2_red = np.sum((diff / sigma_tot) ** 2) / len(det_idx)
                 label = rf"{model_label} ($\chi^2_{{\rm red}}={chi2_red:.2f}$)"
             else:
                 diff = None
                 label = model_label
 
-            ax_sum.plot(best_times, mag_plot, color=mcolor, linewidth=2, linestyle="--", label=label)
+            ax_sum.plot(
+                best_times,
+                mag_plot,
+                color=mcolor,
+                linewidth=2,
+                linestyle="--",
+                label=label,
+            )
             ax_sum.fill_between(
-                best_times, mag_plot + error_budget_val, mag_plot - error_budget_val,
-                facecolor=mcolor, alpha=0.15,
+                best_times,
+                mag_plot + error_budget_val,
+                mag_plot - error_budget_val,
+                facecolor=mcolor,
+                alpha=0.15,
             )
             if diff is not None:
                 ax_delta.scatter(t_obs[det_idx], diff / sigma_tot, color=mcolor, s=20)
@@ -209,12 +235,29 @@ def build_parser() -> argparse.ArgumentParser:
     p = argparse.ArgumentParser(
         description="Overlay best-fit light curves from multiple NMMA model runs (plain matplotlib styling)."
     )
-    p.add_argument("--models", nargs="+", required=True, help="Model keys to overlay, e.g. nugent-hyper v19-1993j-corr")
-    p.add_argument("--outdir", required=True, help="Directory containing one subdirectory per model")
+    p.add_argument(
+        "--models",
+        nargs="+",
+        required=True,
+        help="Model keys to overlay, e.g. nugent-hyper v19-1993j-corr",
+    )
+    p.add_argument(
+        "--outdir",
+        required=True,
+        help="Directory containing one subdirectory per model",
+    )
     p.add_argument("--candname", required=True, help="Candidate name, e.g. SN_2021ugl")
-    p.add_argument("--datafile", default=None, help="Path to the .dat photometry file (default: from the first model's manifest, or {outdir}/data/{candname}.dat)")
+    p.add_argument(
+        "--datafile",
+        default=None,
+        help="Path to the .dat photometry file (default: from the first model's manifest, or {outdir}/data/{candname}.dat)",
+    )
     p.add_argument("--trigger-time", type=float, default=None, dest="trigger_time")
-    p.add_argument("--xlim", default=None, help="xmin,xmax in days since trigger (default: read from the first model's manifest)")
+    p.add_argument(
+        "--xlim",
+        default=None,
+        help="xmin,xmax in days since trigger (default: read from the first model's manifest)",
+    )
     p.add_argument("--error-budget", type=float, default=None, dest="error_budget")
     p.add_argument("--output", default=None, help="Output PNG path")
     return p
