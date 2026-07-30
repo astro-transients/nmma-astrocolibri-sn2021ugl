@@ -82,8 +82,8 @@ def main() -> None:
             command[command.index(flag) + 1] = value
 
     # The archived manifest only ever passed --bestfit, which writes
-    # bestfit_params.json but -- despite both being gated by the same
-    # "if args.bestfit or args.plot" check in nmma/core/base.py -- does NOT
+    # bestfit_params.json but, despite both being gated by the same
+    # "if args.bestfit or args.plot" check in nmma/core/base.py, does NOT
     # generate a plot: that's a second, independent flag (nmma/core/base.py
     # post_process_bestfit, "if args.plot: ... basic_em_analysis_plot(...)").
     # The archived Astro-COLIBRI runs never needed it because that pipeline
