@@ -1,0 +1,17 @@
+[project]
+name = "nmma-astrocolibri-sn2021ugl"
+version = "1.0.0"
+description = "Reproducibility package for the SN 2021ugl case study in the NMMA-Astro-COLIBRI paper"
+readme = "README.md"
+requires-python = "==3.12.*"
+
+dependencies = [
+    "nmma @ git+https://github.com/nuclear-multimessenger-astronomy/nmma.git@main",
+    "matplotlib",
+    "numpy",
+    "astropy",
+]
+
+# PyMultiNest is installed separately by `make setup` (see Makefile / docs/INSTALL.md):
+# it wraps a MultiNest binary that must be compiled from source first, so it
+# cannot be resolved as a normal PyPI/uv dependency.

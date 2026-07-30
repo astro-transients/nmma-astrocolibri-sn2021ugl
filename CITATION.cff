@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the associated paper and this repository (see DOI below)."
+title: "NMMA fits for SN 2021ugl (NMMA-Astro-COLIBRI paper)"
+type: software
+authors:
+  # TODO: complete with the full paper author list, in order, with ORCID
+  # where available (matches the \author entries in the LaTeX source).
+  - family-names: "Kiendrébéogo"
+    given-names: "Ramodgwendé Weizmann"
+    orcid: "" # TODO
+repository-code: "https://github.com/REPLACE_ME/nmma-astrocolibri-sn2021ugl" # TODO: actual URL
+license: MIT
+version: 1.0.0 # TODO: bump to match the tagged release
+date-released: "2026-07-30" # TODO: set to actual release date
+preferred-citation:
+  type: article
+  title: "NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for Supernovae in the Multi-Survey Era"
+  authors:
+    - family-names: "Kiendrébéogo"
+      given-names: "Ramodgwendé Weizmann"
+  journal: "The Astrophysical Journal" # TODO: confirm venue
+  year: 2026 # TODO
+  # doi: "" # TODO: add once assigned
