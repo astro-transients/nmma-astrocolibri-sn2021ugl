@@ -52,20 +52,26 @@ setup: setup-multinest
 	uv pip install /tmp/pymultinest
 	echo 'export $(LIB_PATH_VAR)=$(HOME)/.local/lib:$$$(LIB_PATH_VAR)' >> .venv/bin/activate
 
+# `uv run` does NOT source .venv/bin/activate (it just invokes the venv's
+# interpreter directly), so the $(LIB_PATH_VAR) export appended there by
+# `make setup` is never picked up this way -- set it explicitly here too,
+# or PyMultiNest fails at runtime with a cryptic
+# "AttributeError: dlsym(RTLD_DEFAULT, run): symbol not found"
+# (it never actually loaded libmultinest).
 fit:
 	@if [ -z "$(MODEL)" ] || [ -z "$(CONFIG)" ]; then \
 		echo "Usage: make fit MODEL=<model_key> CONFIG=<config_name>"; \
 		echo "  e.g. make fit MODEL=v19-1993j-corr CONFIG=full_baseline_with_upper_limits"; \
 		exit 1; \
 	fi
-	uv run python scripts/run_fit.py $(CONFIG) $(MODEL)
+	$(LIB_PATH_VAR)=$(HOME)/.local/lib:$$$(LIB_PATH_VAR) uv run python scripts/run_fit.py $(CONFIG) $(MODEL)
 
 plot:
 	@if [ -z "$(MODELS)" ] || [ -z "$(CONFIG)" ]; then \
 		echo "Usage: make plot MODELS=\"model1 model2\" CONFIG=<config_name>"; \
 		exit 1; \
 	fi
-	uv run python scripts/plot_compare_models_public.py \
+	$(LIB_PATH_VAR)=$(HOME)/.local/lib:$$$(LIB_PATH_VAR) uv run python scripts/plot_compare_models_public.py \
 		--outdir data/SN2021ugl_NMMA_posteriors/$(CONFIG) \
 		--candname SN_2021ugl \
 		--models $(MODELS)

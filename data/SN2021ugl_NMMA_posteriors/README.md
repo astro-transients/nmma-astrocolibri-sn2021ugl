@@ -46,5 +46,50 @@ corresponding to each `<model_key>`.
 
 ## Citation
 
-If you use this data, please cite the paper (citation to be added upon
-publication) and the NMMA framework \citep{Pang_2023}.
+If you use this data, please cite:
+
+1. "NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for
+   Supernovae in the Multi-Survey Era" (citation to be added upon
+   publication — see `../../CITATION.cff` at the repository root)
+2. the NMMA framework, via its companion paper, "An updated nuclear-physics
+   and multi-messenger astrophysics framework for binary neutron star
+   mergers" ([Pang et al. 2023, Nature Communications 14,
+   8352](https://doi.org/10.1038/s41467-023-43932-6)):
+
+```bibtex
+@article{Pang:2022rzc,
+      title={An updated nuclear-physics and multi-messenger astrophysics framework for binary neutron star mergers},
+      author={Peter T. H. Pang and Tim Dietrich and Michael W. Coughlin and Mattia Bulla and Ingo Tews and Mouza Almualla and Tyler Barna and Weizmann Kiendrebeogo and Nina Kunert and Gargi Mansingh and Brandon Reed and Niharika Sravan and Andrew Toivonen and Sarah Antier and Robert O. VandenBerg and Jack Heinzel and Vsevolod Nedora and Pouyan Salehi and Ritwik Sharma and Rahul Somasundaram and Chris Van Den Broeck},
+      journal={Nature Communications},
+      year={2023},
+      month={Dec},
+      day={20},
+      volume={14},
+      number={1},
+      pages={8352},
+      issn={2041-1723},
+      doi={10.1038/s41467-023-43932-6},
+      url={https://doi.org/10.1038/s41467-023-43932-6}
+}
+```
+
+3. since NMMA uses `BILBY` as its Bayesian-inference backend, its companion
+   paper, "BILBY: A user-friendly Bayesian inference library for
+   gravitational-wave astronomy" ([Ashton et al. 2019, ApJS 241,
+   27](https://arxiv.org/abs/1811.02042)):
+
+```bibtex
+@article{Ashton:2018jfp,
+    author = "Ashton, Gregory and others",
+    title = "{BILBY: A user-friendly Bayesian inference library for gravitational-wave astronomy}",
+    eprint = "1811.02042",
+    archivePrefix = "arXiv",
+    primaryClass = "astro-ph.IM",
+    doi = "10.3847/1538-4365/ab06fc",
+    journal = "Astrophys. J. Suppl.",
+    volume = "241",
+    number = "2",
+    pages = "27",
+    year = "2019"
+}
+```

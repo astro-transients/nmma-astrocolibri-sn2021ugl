@@ -65,11 +65,17 @@ def main() -> None:
 
     outdir = REPO_ROOT / "results" / config / model
     outdir.mkdir(parents=True, exist_ok=True)
+    # NMMA's lightcurve-analysis rejects --outdir longer than 64 characters
+    # (MultiNest/Fortran uses fixed-length buffers for the output filenames
+    # it derives from it). The absolute path under a deep clone location
+    # easily exceeds that; a path relative to REPO_ROOT (where the
+    # subprocess's cwd is set below) stays well under the limit.
+    outdir_arg = str(Path("results") / config / model)
     datafile = DATA_ROOT / config / "data" / f"{CANDNAME}.dat"
     prior_file = resolve_prior_file(manifest["options"]["prior_file"], config, model)
 
     replacements = {
-        "--outdir": str(outdir),
+        "--outdir": outdir_arg,
         "--light-curve-data": str(datafile),
         "--prior-file": str(prior_file),
     }
