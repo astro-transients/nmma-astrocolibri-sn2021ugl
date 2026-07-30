@@ -9,7 +9,7 @@ reproduce them from scratch.
 
 ## Contents
 
-- `data/SN2021ugl_NMMA_posteriors/` — posterior samples, best-fit
+- `data/SN2021ugl_NMMA_posteriors/`, posterior samples, best-fit
   parameters, and figures for all four configurations:
   - `early_time_with_upper_limits/`, `early_time_detections_only/`
     (first ~6 days of photometry)
@@ -18,7 +18,7 @@ reproduce them from scratch.
 
   See `data/SN2021ugl_NMMA_posteriors/README.md` for the exact file layout.
 
-- `scripts/plot_compare_models_public.py` — overlays best-fit light curves
+- `scripts/plot_compare_models_public.py`, overlays best-fit light curves
   from several model runs on one figure (standard matplotlib styling; this
   is a de-branded, standalone version of the script used to generate the
   multi-model comparison figures in the paper — see "Relation to the
@@ -44,18 +44,18 @@ The NMMA–Astro-COLIBRI service (https://astro-colibri.science/, docs at
 https://nmma.live/) that produced these fits runs the same underlying NMMA
 analysis but renders its own figures with the Astro-COLIBRI app's visual
 theme and branding. If you just want to submit your own fits through the
-web interface, no local installation is needed — use the live service
+web interface, no local installation is needed, use the live service
 directly. The `plot_compare_models_public.py` script here is a standalone
 reimplementation using plain matplotlib defaults, so this repository can
 be run and modified independently without depending on, or
-redistributing, the Astro-COLIBRI application's front-end styling code —
+redistributing, the Astro-COLIBRI application's front-end styling code,
 useful if you want to reproduce this paper's specific results offline, or
 build on the analysis pipeline yourself (see `docs/INSTALL.md`).
 
 ## License
 
 Code is released under the MIT License (see `LICENSE`). Data in `data/` is
-released under CC-BY-4.0 — please cite the paper (see `CITATION.cff`) if you
+released under CC-BY-4.0, please cite the paper (see `CITATION.cff`) if you
 reuse it.
 
 ## Citation

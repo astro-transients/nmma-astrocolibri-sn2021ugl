@@ -15,3 +15,8 @@ dependencies = [
 # PyMultiNest is installed separately by `make setup` (see Makefile / docs/INSTALL.md):
 # it wraps a MultiNest binary that must be compiled from source first, so it
 # cannot be resolved as a normal PyPI/uv dependency.
+
+[dependency-groups]
+dev = [
+    "pre-commit",
+]

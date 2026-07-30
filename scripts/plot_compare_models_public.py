@@ -107,6 +107,21 @@ def compare_models(args) -> str:
     parts = str(xlim_str).split(",")
     xlim = (float(parts[0]), float(parts[1]))
 
+    def _ylim_for_filter(filt: str) -> tuple[float, float]:
+        """Same padding formula as NMMA's own
+        get_mag_limits_from_obs_data (nmma/em/plotting_utils.py), applied
+        per filter, so a model curve running to extreme magnitudes
+        outside its template's valid phase range (e.g. nugent-hyper
+        extrapolated close to the trigger) in one band can't blow up the
+        axis in every panel."""
+        mag = data[filt][:, 1]
+        mag = mag[np.isfinite(mag)]
+        min_mag, max_mag = mag.min(), mag.max()
+        return (
+            min(1.05 * max_mag, 1 + max_mag),
+            max(min_mag - 1, 0.95 * min_mag),
+        )  # inverted: brighter (lower mag) at the top
+
     model_colors = [_MODEL_COLORS[i % len(_MODEL_COLORS)] for i in range(len(runs))]
 
     ncol = len(filters_plot) if len(filters_plot) <= 3 else 2
@@ -119,7 +134,7 @@ def compare_models(args) -> str:
         gridspec_kw={"height_ratios": [3, 1] * nrow},
     )
     axes = np.atleast_2d(axes)
-    fig.suptitle(f"{args.candname.replace('_', ' ')} — model comparison", fontsize=14)
+    fig.suptitle(f"{args.candname.replace('_', ' ')} model comparison", fontsize=14)
 
     for idx, (filt, band_color) in enumerate(
         zip(
@@ -212,8 +227,9 @@ def compare_models(args) -> str:
         ax_sum.set_ylabel("AB magnitude")
         ax_delta.set_ylabel(r"$\Delta\,(\sigma)$")
         ax_delta.set_xlabel("Time since trigger [days]")
-        ax_sum.invert_yaxis()
+        ax_sum.set_ylim(_ylim_for_filter(filt))
         ax_sum.set_xlim(xlim)
+        ax_delta.set_xlim(xlim)
         ax_sum.legend(fontsize=8, loc="best")
 
     # Blank any unused grid cells (e.g. 3 filters in a 2x2 layout).
@@ -223,9 +239,17 @@ def compare_models(args) -> str:
         axes[2 * r + 1, c].axis("off")
 
     fig.tight_layout()
+    # Never default into --outdir: that's the read-only data/ archive this
+    # script loads bestfit_params.json/manifest.json from (see the module
+    # docstring); writing there would silently modify the archived
+    # reference results. Regenerated plots default to ./plots/ instead,
+    # the Makefile's `plot` target overrides this explicitly to write into
+    # results/ (gitignored), matching the same read-data/write-results
+    # split used by run_fit.py.
     output = args.output or os.path.join(
-        args.outdir, f"{args.candname}_compare_" + "_".join(args.models) + ".png"
+        "plots", f"{args.candname}_compare_" + "_".join(args.models) + ".png"
     )
+    os.makedirs(os.path.dirname(output) or ".", exist_ok=True)
     fig.savefig(output, dpi=150, bbox_inches="tight")
     plt.close(fig)
     return output

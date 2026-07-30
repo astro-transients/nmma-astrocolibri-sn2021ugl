@@ -54,7 +54,7 @@ setup: setup-multinest
 
 # `uv run` does NOT source .venv/bin/activate (it just invokes the venv's
 # interpreter directly), so the $(LIB_PATH_VAR) export appended there by
-# `make setup` is never picked up this way -- set it explicitly here too,
+# `make setup` is never picked up this way, set it explicitly here too,
 # or PyMultiNest fails at runtime with a cryptic
 # "AttributeError: dlsym(RTLD_DEFAULT, run): symbol not found"
 # (it never actually loaded libmultinest).
@@ -71,7 +71,9 @@ plot:
 		echo "Usage: make plot MODELS=\"model1 model2\" CONFIG=<config_name>"; \
 		exit 1; \
 	fi
+	@mkdir -p results/$(CONFIG)
 	$(LIB_PATH_VAR)=$(HOME)/.local/lib:$$$(LIB_PATH_VAR) uv run python scripts/plot_compare_models_public.py \
 		--outdir data/SN2021ugl_NMMA_posteriors/$(CONFIG) \
 		--candname SN_2021ugl \
-		--models $(MODELS)
+		--models $(MODELS) \
+		--output results/$(CONFIG)/SN_2021ugl_compare_$(subst $() ,_,$(MODELS)).png

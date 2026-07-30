@@ -81,6 +81,18 @@ def main() -> None:
         if flag in command:
             command[command.index(flag) + 1] = value
 
+    # The archived manifest only ever passed --bestfit, which writes
+    # bestfit_params.json but -- despite both being gated by the same
+    # "if args.bestfit or args.plot" check in nmma/core/base.py -- does NOT
+    # generate a plot: that's a second, independent flag (nmma/core/base.py
+    # post_process_bestfit, "if args.plot: ... basic_em_analysis_plot(...)").
+    # The archived Astro-COLIBRI runs never needed it because that pipeline
+    # renders its own branded plot downstream from bestfit_params.json
+    # (see plot_compare_models_public.py). Add it here so `make fit` also
+    # produces NMMA's native <label>_bestfit_lightcurves.png.
+    if "--plot" not in command:
+        command.append("--plot")
+
     print("Running:", " ".join(command))
     subprocess.run(command, check=True, cwd=REPO_ROOT)
 
