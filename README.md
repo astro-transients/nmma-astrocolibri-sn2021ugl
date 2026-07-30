@@ -40,13 +40,17 @@ troubleshooting.
 
 ## Relation to the Astro-COLIBRI service
 
-The NMMA–Astro-COLIBRI service (https://astro-colibri.science/) that
-produced these fits runs the same underlying NMMA analysis but renders its
-own figures with the Astro-COLIBRI app's visual theme and branding. The
-`plot_compare_models_public.py` script here is a standalone reimplementation
-using plain matplotlib defaults, so this repository can be run and modified
-independently without depending on, or redistributing, the Astro-COLIBRI
-application's front-end styling code.
+The NMMA–Astro-COLIBRI service (https://astro-colibri.science/, docs at
+https://nmma.live/) that produced these fits runs the same underlying NMMA
+analysis but renders its own figures with the Astro-COLIBRI app's visual
+theme and branding. If you just want to submit your own fits through the
+web interface, no local installation is needed — use the live service
+directly. The `plot_compare_models_public.py` script here is a standalone
+reimplementation using plain matplotlib defaults, so this repository can
+be run and modified independently without depending on, or
+redistributing, the Astro-COLIBRI application's front-end styling code —
+useful if you want to reproduce this paper's specific results offline, or
+build on the analysis pipeline yourself (see `docs/INSTALL.md`).
 
 ## License
 

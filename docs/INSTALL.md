@@ -16,7 +16,7 @@ https://nuclear-multimessenger-astronomy.github.io/nmma/
 ## Steps
 
 ```bash
-git clone <this-repo-url>
+git clone https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl.git
 cd nmma-astrocolibri-sn2021ugl
 make setup
 ```

@@ -8,7 +8,7 @@ authors:
   - family-names: "Kiendrébéogo"
     given-names: "Ramodgwendé Weizmann"
     orcid: "" # TODO
-repository-code: "https://github.com/REPLACE_ME/nmma-astrocolibri-sn2021ugl" # TODO: actual URL
+repository-code: "https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl"
 license: MIT
 version: 1.0.0 # TODO: bump to match the tagged release
 date-released: "2026-07-30" # TODO: set to actual release date
