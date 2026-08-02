@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite the associated paper and this repository (see DOI below)."
-title: "NMMA fits for SN 2021ugl (NMMA-Astro-COLIBRI paper)"
+title: "NMMA fits for SN 2021ugl (NMMA–Astro-COLIBRI paper)"
 type: software
 authors:
   # Matches the \author entries in the paper's LaTeX source at time of
@@ -59,6 +59,6 @@ preferred-citation:
       given-names: "Alexandre"
     - family-names: "Schüssler"
       given-names: "Fabian"
-  journal: "The Astrophysical Journal" # TODO: confirm venue
+  journal: " " # TODO: add once assigned
   year: 2026 # TODO
   # doi: "" # TODO: add once assigned

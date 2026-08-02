@@ -106,8 +106,8 @@ general fixes needed to replay *any* archived fit through `run_fit.py`
 
 ## Model keys
 
-See Table "Supernova models implemented in the NMMA--Astro-COLIBRI
-service" and Table "Kilonova models implemented in the NMMA--Astro-COLIBRI
+See Table "Supernova models implemented in the NMMA–Astro-COLIBRI
+service" and Table "Kilonova models implemented in the NMMA–Astro-COLIBRI
 service" in the paper for the physical class and free parameters
 corresponding to each `<model_key>`.
 

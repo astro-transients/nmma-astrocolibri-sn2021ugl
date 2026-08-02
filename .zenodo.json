@@ -1,6 +1,6 @@
 {
-  "title": "NMMA fits for SN 2021ugl (NMMA-Astro-COLIBRI paper)",
-  "description": "Nested-sampling posteriors, best-fit parameters, and figures for all four analysis configurations (early-time / full-baseline, with / without upper limits) used in the Results section of 'NMMA-Astro-COLIBRI: An Automated Light-Curve Classification Service for Supernovae in the Multi-Survey Era', together with the scripts needed to reproduce them.",
+  "title": "NMMA fits for SN 2021ugl (NMMA–Astro-COLIBRI paper)",
+  "description": "Nested-sampling posteriors, best-fit parameters, and figures for all four analysis configurations (early-time / full-baseline, with / without upper limits) used in the Results section of 'NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for Supernovae in the Multi-Survey Era', together with the scripts needed to reproduce them.",
   "upload_type": "dataset",
   "license": "CC-BY-4.0",
   "creators": [
