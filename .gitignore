@@ -4,3 +4,4 @@ __pycache__/
 results/
 .DS_Store
 .ruff_cache
+svdmodels/

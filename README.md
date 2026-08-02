@@ -54,11 +54,11 @@ build on the analysis pipeline yourself (see `docs/INSTALL.md`).
 
 ## License
 
-Code is released under the MIT License (see `LICENSE`). Data in `data/` is
-released under CC-BY-4.0, please cite the paper (see `CITATION.cff`) if you
-reuse it.
+Code is released under the [MIT License](LICENSE). Data in `data/` is
+released under [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/),
+please cite the paper (see [`CITATION.cff`](CITATION.cff)) if you reuse it.
 
 ## Citation
 
-See `CITATION.cff`, or cite the archived Zenodo release directly (DOI to be
-added once minted).
+See [`CITATION.cff`](CITATION.cff), or cite the archived Zenodo release
+directly (DOI to be added once minted).

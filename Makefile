@@ -16,8 +16,17 @@
 UNAME := $(shell uname -s)
 
 ifeq ($(UNAME), Darwin)
-    BLAS_LIB := /opt/homebrew/opt/openblas/lib/libopenblas.dylib
-    LAPACK_LIB := /opt/homebrew/opt/openblas/lib/libopenblas.dylib
+    # Link against Apple's Accelerate framework, not Homebrew openblas: numpy
+    # on macOS (this project's dependency) links against Accelerate too, and
+    # having two different BLAS/LAPACK implementations loaded in the same
+    # process corrupts dlsym(RTLD_DEFAULT, ...) symbol lookups -- surfaces as
+    # PyMultiNest failing with "AttributeError: dlsym(RTLD_DEFAULT, run):
+    # symbol not found" for any model that actually exercises numpy/scipy
+    # linear algebra before PyMultiNest is invoked (e.g. Bu2019lm's sklearn_gp
+    # SVD interpolation; plain SNCosmo supernova templates never hit this
+    # because they never call into BLAS/LAPACK at all).
+    BLAS_LIB := "-framework Accelerate"
+    LAPACK_LIB := "-framework Accelerate"
     LIB_EXT := dylib
     LIB_PATH_VAR := DYLD_LIBRARY_PATH
 else
