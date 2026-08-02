@@ -69,11 +69,10 @@ the run never converges, regardless of `--nlive` -- but that numerical
 failure is a symptom of the physical mismatch above, not the reason for
 excluding it.)
 
-### Real, unrelated bugs found and fixed along the way
+### Unrelated bugs fixed in this tooling
 
-While investigating the above, three genuine bugs were found and fixed in
-this repo (all worth knowing about if you hit similar symptoms running
-other models):
+Three bugs, unrelated to the kilonova exclusion above, affect replaying
+*any* archived fit through `run_fit.py` (`make fit`):
 
 1. `make fit`/`make plot` invoke `uv run` directly, which does **not**
    source `.venv/bin/activate` -- so the `$DYLD_LIBRARY_PATH` /
@@ -100,9 +99,7 @@ other models):
    exercised. `run_fit.py` now splits any comma-joined `--xlim`/`--ylim`
    token into the separate arguments NMMA's parser actually expects.
 
-None of these three is related to kilonova grid coverage above -- they are
-general fixes needed to replay *any* archived fit through `run_fit.py`
-(`make fit`), independent of which model or configuration is chosen.
+None of these three is related to kilonova grid coverage above.
 
 ## Model keys
 

@@ -3,9 +3,6 @@ message: "If you use this code or data, please cite the associated paper and thi
 title: "NMMA fits for SN 2021ugl (NMMA–Astro-COLIBRI paper)"
 type: software
 authors:
-  # Matches the \author entries in the paper's LaTeX source at time of
-  # writing. Add further authors only once they have explicitly confirmed
-  # co-authorship.
   - family-names: "Kiendrébéogo"
     given-names: "Ramodgwendé Weizmann"
     orcid: "https://orcid.org/0000-0002-9108-5059"
