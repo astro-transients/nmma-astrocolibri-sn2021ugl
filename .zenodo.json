@@ -6,7 +6,40 @@
   "creators": [
     {
       "name": "Kiendrébéogo, Ramodgwendé Weizmann",
-      "affiliation": "TODO"
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Laboratoire de Physique et de Chimie de l'Environnement, Université Joseph KI-ZERBO, Ouagadougou, Burkina Faso; Université Côte d'Azur, Observatoire de la Côte d'Azur, CNRS, Laboratoire Artemis, 06300 Nice, France",
+      "orcid": "0000-0002-9108-5059"
+    },
+    {
+      "name": "Cornejo Avila, Bernardo",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France",
+      "orcid": "0009-0003-0039-0483"
+    },
+    {
+      "name": "Bisero, Sofia",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France",
+      "orcid": "0009-0005-6643-1473"
+    },
+    {
+      "name": "Cellier, Maxime",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
+    },
+    {
+      "name": "Ciric, Antoine",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+    },
+    {
+      "name": "Jaroschewski, Ilja",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France",
+      "orcid": "0000-0001-5180-2845"
+    },
+    {
+      "name": "Saint-Paul, Alexandre",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
+    },
+    {
+      "name": "Schüssler, Fabian",
+      "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France",
+      "orcid": "0000-0003-1500-6571"
     }
   ],
   "keywords": [

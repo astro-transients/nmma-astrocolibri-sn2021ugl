@@ -3,21 +3,62 @@ message: "If you use this code or data, please cite the associated paper and thi
 title: "NMMA fits for SN 2021ugl (NMMA-Astro-COLIBRI paper)"
 type: software
 authors:
-  # TODO: complete with the full paper author list, in order, with ORCID
-  # where available (matches the \author entries in the LaTeX source).
+  # Matches the \author entries in the paper's LaTeX source at time of
+  # writing. Add further authors only once they have explicitly confirmed
+  # co-authorship.
   - family-names: "Kiendrébéogo"
     given-names: "Ramodgwendé Weizmann"
-    orcid: "" # TODO
+    orcid: "https://orcid.org/0000-0002-9108-5059"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Laboratoire de Physique et de Chimie de l'Environnement, Université Joseph KI-ZERBO, Ouagadougou, Burkina Faso; Université Côte d'Azur, Observatoire de la Côte d'Azur, CNRS, Laboratoire Artemis, 06300 Nice, France"
+  - family-names: "Cornejo Avila"
+    given-names: "Bernardo"
+    orcid: "https://orcid.org/0009-0003-0039-0483"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+  - family-names: "Bisero"
+    given-names: "Sofia"
+    orcid: "https://orcid.org/0009-0005-6643-1473"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+  - family-names: "Cellier"
+    given-names: "Maxime"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
+  - family-names: "Ciric"
+    given-names: "Antoine"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+  - family-names: "Jaroschewski"
+    given-names: "Ilja"
+    orcid: "https://orcid.org/0000-0001-5180-2845"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+  - family-names: "Saint-Paul"
+    given-names: "Alexandre"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
+  - family-names: "Schüssler"
+    given-names: "Fabian"
+    orcid: "https://orcid.org/0000-0003-1500-6571"
+    affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
 repository-code: "https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl"
 license: MIT
-version: 1.0.0 # TODO: bump to match the tagged release
-date-released: "2026-07-30" # TODO: set to actual release date
+version: 1.0.0
+date-released: "2026-08-02"
 preferred-citation:
   type: article
   title: "NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for Supernovae in the Multi-Survey Era"
   authors:
     - family-names: "Kiendrébéogo"
       given-names: "Ramodgwendé Weizmann"
+    - family-names: "Cornejo Avila"
+      given-names: "Bernardo"
+    - family-names: "Bisero"
+      given-names: "Sofia"
+    - family-names: "Cellier"
+      given-names: "Maxime"
+    - family-names: "Ciric"
+      given-names: "Antoine"
+    - family-names: "Jaroschewski"
+      given-names: "Ilja"
+    - family-names: "Saint-Paul"
+      given-names: "Alexandre"
+    - family-names: "Schüssler"
+      given-names: "Fabian"
   journal: "The Astrophysical Journal" # TODO: confirm venue
   year: 2026 # TODO
   # doi: "" # TODO: add once assigned
