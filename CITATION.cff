@@ -35,5 +35,12 @@ authors:
 repository-code: "https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl"
 license: MIT
 version: 1.0.0
-date-released: "2026-08-02"
+date-released: "2026-08-03"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21771188"
+    description: "Archived snapshot of version v1.0.0 on Zenodo"
+  - type: doi
+    value: "10.5281/zenodo.21771187"
+    description: "Concept DOI, always resolves to the latest version"
 # preferred-citation: add once the paper is published (journal, year, doi)
