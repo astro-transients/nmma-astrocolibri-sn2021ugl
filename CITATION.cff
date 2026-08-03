@@ -36,26 +36,4 @@ repository-code: "https://github.com/astro-transients/nmma-astrocolibri-sn2021ug
 license: MIT
 version: 1.0.0
 date-released: "2026-08-02"
-preferred-citation:
-  type: article
-  title: "NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for Supernovae in the Multi-Survey Era"
-  authors:
-    - family-names: "Kiendrébéogo"
-      given-names: "Ramodgwendé Weizmann"
-    - family-names: "Cornejo Avila"
-      given-names: "Bernardo"
-    - family-names: "Bisero"
-      given-names: "Sofia"
-    - family-names: "Cellier"
-      given-names: "Maxime"
-    - family-names: "Ciric"
-      given-names: "Antoine"
-    - family-names: "Jaroschewski"
-      given-names: "Ilja"
-    - family-names: "Saint-Paul"
-      given-names: "Alexandre"
-    - family-names: "Schüssler"
-      given-names: "Fabian"
-  journal: " " # TODO: add once assigned
-  year: 2026 # TODO
-  # doi: "" # TODO: add once assigned
+# preferred-citation: add once the paper is published (journal, year, doi)
