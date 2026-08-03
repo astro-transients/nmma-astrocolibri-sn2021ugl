@@ -2,7 +2,7 @@
 
 [![License: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21771187.svg)](https://doi.org/10.5281/zenodo.21771187)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21771188.svg)](https://doi.org/10.5281/zenodo.21771188)
 [![Paper](https://img.shields.io/badge/Paper-in%20preparation-lightgrey.svg)](https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl)
 [![Astro-COLIBRI](https://img.shields.io/badge/Astro--COLIBRI-live%20service-008CE7.svg)](https://astro-colibri.science/)
 [![NMMA Live](https://img.shields.io/badge/NMMA-live%20docs-blue.svg)](https://nmma.live/)
@@ -68,9 +68,9 @@ please cite the paper (see [`CITATION.cff`](CITATION.cff)) if you reuse it.
 ## Citation
 
 See [`CITATION.cff`](CITATION.cff), or cite the archived Zenodo release
-directly: [10.5281/zenodo.21771187](https://doi.org/10.5281/zenodo.21771187)
-(concept DOI, always resolves to the latest version; this release is
-[10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)).
+directly: [10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
+(concept DOI, always resolving to the latest version:
+[10.5281/zenodo.21771187](https://doi.org/10.5281/zenodo.21771187)).
 
 ```bibtex
 @dataset{kiendrebeogo_2026_21771188,
