@@ -25,6 +25,9 @@ authors:
     given-names: "Ilja"
     orcid: "https://orcid.org/0000-0001-5180-2845"
     affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France"
+  - family-names: "Rose"
+    given-names: "Henrik"
+    affiliation: "Universität Potsdam, Institut für Physik und Astronomie, Karl-Liebknecht-Str. 24/25, 14476 Potsdam, Germany"
   - family-names: "Saint-Paul"
     given-names: "Alexandre"
     affiliation: "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
@@ -43,4 +46,31 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.21771187"
     description: "Concept DOI, always resolves to the latest version"
-# preferred-citation: add once the paper is published (journal, year, doi)
+preferred-citation:
+  type: article
+  title: "NMMA-Astro-COLIBRI: An Automated Light-Curve Supernovae Classification Service in the Multi-Survey Era"
+  authors:
+    - family-names: "Kiendrébéogo"
+      given-names: "Ramodgwendé Weizmann"
+    - family-names: "Cornejo Avila"
+      given-names: "Bernardo"
+    - family-names: "Bisero"
+      given-names: "Sofia"
+    - family-names: "Cellier"
+      given-names: "Maxime"
+    - family-names: "Ciric"
+      given-names: "Antoine"
+    - family-names: "Jaroschewski"
+      given-names: "Ilja"
+    - family-names: "Rose"
+      given-names: "Henrik"
+    - family-names: "Saint-Paul"
+      given-names: "Alexandre"
+    - family-names: "Schüssler"
+      given-names: "Fabian"
+  year: 2026
+  identifiers:
+    - type: other
+      value: "arXiv:2608.17568"
+      description: "arXiv preprint"
+  url: "https://arxiv.org/abs/2608.17568"

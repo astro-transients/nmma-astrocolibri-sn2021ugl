@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/Code-MIT-yellow.svg)](LICENSE)
 [![License: CC BY 4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21771188.svg)](https://doi.org/10.5281/zenodo.21771188)
-[![Paper](https://img.shields.io/badge/Paper-in%20preparation-lightgrey.svg)](https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl)
+[![Paper](https://img.shields.io/badge/arXiv-2608.17568-b31b1b.svg)](https://arxiv.org/abs/2608.17568)
 [![Astro-COLIBRI](https://img.shields.io/badge/Astro--COLIBRI-live%20service-008CE7.svg)](https://astro-colibri.science/)
 [![NMMA Live](https://img.shields.io/badge/NMMA-live%20docs-blue.svg)](https://nmma.live/)
 
@@ -80,6 +80,7 @@ directly: [10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
                   Cellier, Maxime and
                   Ciric, Antoine and
                   Jaroschewski, Ilja and
+                  Rose, Henrik and
                   Saint-Paul, Alexandre and
                   Schüssler, Fabian},
   title        = {NMMA fits for SN 2021ugl (NMMA–Astro-COLIBRI paper)},

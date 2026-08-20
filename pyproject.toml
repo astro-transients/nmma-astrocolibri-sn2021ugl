@@ -6,7 +6,11 @@ readme = "README.md"
 requires-python = "==3.12.*"
 
 dependencies = [
-    "nmma @ git+https://github.com/nuclear-multimessenger-astronomy/nmma.git@main",
+    # Pinned to a specific commit rather than @main for reproducibility --
+    # main can change after this package is archived. Switch to a plain
+    # PyPI version pin (e.g. "nmma>=1.2") once a release including this
+    # commit is published.
+    "nmma @ git+https://github.com/nuclear-multimessenger-astronomy/nmma.git@4342b6abb1d70eb6f3e60afcc138662386d3c29a",
     "matplotlib",
     "numpy",
     "astropy",

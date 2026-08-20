@@ -33,6 +33,10 @@
       "orcid": "0000-0001-5180-2845"
     },
     {
+      "name": "Rose, Henrik",
+      "affiliation": "Universität Potsdam, Institut für Physik und Astronomie, Karl-Liebknecht-Str. 24/25, 14476 Potsdam, Germany"
+    },
+    {
       "name": "Saint-Paul, Alexandre",
       "affiliation": "Université Paris-Saclay – CEA – Irfu, F-91191 Gif-sur-Yvette, France; Ecole d'ingénieurs aéronautique et spatiale (IPSA), Paris"
     },
@@ -51,5 +55,12 @@
     "NMMA",
     "Astro-COLIBRI",
     "SN 2021ugl"
+  ],
+  "related_identifiers": [
+    {
+      "relation": "isSupplementTo",
+      "identifier": "https://arxiv.org/abs/2608.17568",
+      "resource_type": "publication-preprint"
+    }
   ]
 }

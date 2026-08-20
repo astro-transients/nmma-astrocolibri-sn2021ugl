@@ -2,7 +2,7 @@
 
 [![License: CC BY 4.0](https://img.shields.io/badge/Data-CC--BY--4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21771188.svg)](https://doi.org/10.5281/zenodo.21771188)
-[![Paper](https://img.shields.io/badge/Paper-in%20preparation-lightgrey.svg)](https://github.com/astro-transients/nmma-astrocolibri-sn2021ugl)
+[![Paper](https://img.shields.io/badge/arXiv-2608.17568-b31b1b.svg)](https://arxiv.org/abs/2608.17568)
 [![Astro-COLIBRI](https://img.shields.io/badge/Astro--COLIBRI-live%20service-008CE7.svg)](https://astro-colibri.science/)
 [![NMMA Live](https://img.shields.io/badge/NMMA-live%20docs-blue.svg)](https://nmma.live/)
 
@@ -118,10 +118,11 @@ corresponding to each `<model_key>`.
 
 If you use this data, please cite:
 
-1. "NMMA–Astro-COLIBRI: An Automated Light-Curve Classification Service for
-   Supernovae in the Multi-Survey Era" (citation to be added upon
-   publication — see `../../CITATION.cff` at the repository root), or this
-   archived dataset directly: [10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
+1. "NMMA-Astro-COLIBRI: An Automated Light-Curve Supernovae Classification
+   Service in the Multi-Survey Era" (Kiendrébéogo et al. 2026,
+   [arXiv:2608.17568](https://arxiv.org/abs/2608.17568); see
+   `../../CITATION.cff` at the repository root), or this archived dataset
+   directly: [10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
    (concept DOI, always resolving to the latest version:
    [10.5281/zenodo.21771187](https://doi.org/10.5281/zenodo.21771187))
 2. the NMMA framework, via its companion paper, "An updated nuclear-physics
