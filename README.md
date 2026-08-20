@@ -67,10 +67,23 @@ please cite the paper (see [`CITATION.cff`](CITATION.cff)) if you reuse it.
 
 ## Citation
 
-See [`CITATION.cff`](CITATION.cff), or cite the archived Zenodo release
-directly: [10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
+See [`CITATION.cff`](CITATION.cff), or cite the paper and/or the archived
+Zenodo release directly:
+[10.5281/zenodo.21771188](https://doi.org/10.5281/zenodo.21771188)
 (concept DOI, always resolving to the latest version:
 [10.5281/zenodo.21771187](https://doi.org/10.5281/zenodo.21771187)).
+
+```bibtex
+@misc{kiendrebeogo2026nmmaastrocolibriautomatedlightcurvesupernovae,
+      title={NMMA-Astro-COLIBRI: An Automated Light-Curve Supernovae Classification Service in the Multi-Survey Era},
+      author={R. Weizmann Kiendrebeogo and Bernardo Cornejo Avila and Sofia Bisero and Maxime Cellier and Antoine Ciric and Ilja Jaroschewski and Henrik Rose and Alexandre Saint-Paul and Fabian Schüssler},
+      year={2026},
+      eprint={2608.17568},
+      archivePrefix={arXiv},
+      primaryClass={astro-ph.HE},
+      url={https://arxiv.org/abs/2608.17568},
+}
+```
 
 ```bibtex
 @dataset{kiendrebeogo_2026_21771188,
