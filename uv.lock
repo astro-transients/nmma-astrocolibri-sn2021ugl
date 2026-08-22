@@ -1849,7 +1849,7 @@ wheels = [
 [[package]]
 name = "nmma"
 version = "1.0.1"
-source = { git = "https://github.com/nuclear-multimessenger-astronomy/nmma.git?rev=main#9964e5bae43680ddcf5e6a04a114ad9e663f0692" }
+source = { git = "https://github.com/nuclear-multimessenger-astronomy/nmma.git?rev=4342b6abb1d70eb6f3e60afcc138662386d3c29a#4342b6abb1d70eb6f3e60afcc138662386d3c29a" }
 dependencies = [
     { name = "arviz" },
     { name = "astropy" },
@@ -1895,7 +1895,7 @@ dev = [
 requires-dist = [
     { name = "astropy" },
     { name = "matplotlib" },
-    { name = "nmma", git = "https://github.com/nuclear-multimessenger-astronomy/nmma.git?rev=main" },
+    { name = "nmma", git = "https://github.com/nuclear-multimessenger-astronomy/nmma.git?rev=4342b6abb1d70eb6f3e60afcc138662386d3c29a" },
     { name = "numpy" },
 ]
 
