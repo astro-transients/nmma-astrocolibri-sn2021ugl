@@ -76,7 +76,15 @@ Zenodo release directly:
 ```bibtex
 @misc{kiendrebeogo2026nmmaastrocolibriautomatedlightcurvesupernovae,
       title={NMMA-Astro-COLIBRI: An Automated Light-Curve Supernovae Classification Service in the Multi-Survey Era},
-      author={R. Weizmann Kiendrebeogo and Bernardo Cornejo Avila and Sofia Bisero and Maxime Cellier and Antoine Ciric and Ilja Jaroschewski and Henrik Rose and Alexandre Saint-Paul and Fabian Schüssler},
+      author={R. Weizmann Kiendrebeogo and
+              Bernardo Cornejo Avila and
+              Sofia Bisero and
+              Maxime Cellier and
+              Antoine Ciric and
+              Ilja Jaroschewski and
+              Henrik Rose and
+              Alexandre Saint-Paul and
+              Fabian Schüssler},
       year={2026},
       eprint={2608.17568},
       archivePrefix={arXiv},
